@@ -1,0 +1,12 @@
+D:\Repositories\dotnet-microservices-orch\src\Orchestrator.Contracts\bin\Debug\net8.0\Orchestrator.Contracts.deps.json
+D:\Repositories\dotnet-microservices-orch\src\Orchestrator.Contracts\bin\Debug\net8.0\Orchestrator.Contracts.dll
+D:\Repositories\dotnet-microservices-orch\src\Orchestrator.Contracts\bin\Debug\net8.0\Orchestrator.Contracts.pdb
+D:\Repositories\dotnet-microservices-orch\src\Orchestrator.Contracts\obj\Debug\net8.0\Orchestrator.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+D:\Repositories\dotnet-microservices-orch\src\Orchestrator.Contracts\obj\Debug\net8.0\Orchestrator.Contracts.AssemblyInfoInputs.cache
+D:\Repositories\dotnet-microservices-orch\src\Orchestrator.Contracts\obj\Debug\net8.0\Orchestrator.Contracts.AssemblyInfo.cs
+D:\Repositories\dotnet-microservices-orch\src\Orchestrator.Contracts\obj\Debug\net8.0\Orchestrator.Contracts.csproj.CoreCompileInputs.cache
+D:\Repositories\dotnet-microservices-orch\src\Orchestrator.Contracts\obj\Debug\net8.0\Orchestrator.Contracts.sourcelink.json
+D:\Repositories\dotnet-microservices-orch\src\Orchestrator.Contracts\obj\Debug\net8.0\Orchestrator.Contracts.dll
+D:\Repositories\dotnet-microservices-orch\src\Orchestrator.Contracts\obj\Debug\net8.0\refint\Orchestrator.Contracts.dll
+D:\Repositories\dotnet-microservices-orch\src\Orchestrator.Contracts\obj\Debug\net8.0\Orchestrator.Contracts.pdb
+D:\Repositories\dotnet-microservices-orch\src\Orchestrator.Contracts\obj\Debug\net8.0\ref\Orchestrator.Contracts.dll

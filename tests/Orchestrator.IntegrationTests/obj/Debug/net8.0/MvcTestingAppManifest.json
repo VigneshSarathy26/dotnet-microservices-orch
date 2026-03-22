@@ -1,0 +1,5 @@
+{
+  "Orchestrator.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "d:\\Repositories\\dotnet-microservices-orch\\src\\Orchestrator.Contracts",
+  "Orchestrator.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "d:\\Repositories\\dotnet-microservices-orch\\src\\Orchestrator.Infrastructure",
+  "Orchestrator.StateMachines, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "d:\\Repositories\\dotnet-microservices-orch\\src\\Orchestrator.StateMachines"
+}

@@ -1,0 +1,16 @@
+D:\Repositories\dotnet-microservices-orch\src\Orchestrator.StateMachines\bin\Debug\net8.0\Orchestrator.StateMachines.deps.json
+D:\Repositories\dotnet-microservices-orch\src\Orchestrator.StateMachines\bin\Debug\net8.0\Orchestrator.StateMachines.dll
+D:\Repositories\dotnet-microservices-orch\src\Orchestrator.StateMachines\bin\Debug\net8.0\Orchestrator.StateMachines.pdb
+D:\Repositories\dotnet-microservices-orch\src\Orchestrator.StateMachines\bin\Debug\net8.0\Orchestrator.Contracts.dll
+D:\Repositories\dotnet-microservices-orch\src\Orchestrator.StateMachines\bin\Debug\net8.0\Orchestrator.Contracts.pdb
+D:\Repositories\dotnet-microservices-orch\src\Orchestrator.StateMachines\obj\Debug\net8.0\Orchestrator.StateMachines.csproj.AssemblyReference.cache
+D:\Repositories\dotnet-microservices-orch\src\Orchestrator.StateMachines\obj\Debug\net8.0\Orchestrator.StateMachines.GeneratedMSBuildEditorConfig.editorconfig
+D:\Repositories\dotnet-microservices-orch\src\Orchestrator.StateMachines\obj\Debug\net8.0\Orchestrator.StateMachines.AssemblyInfoInputs.cache
+D:\Repositories\dotnet-microservices-orch\src\Orchestrator.StateMachines\obj\Debug\net8.0\Orchestrator.StateMachines.AssemblyInfo.cs
+D:\Repositories\dotnet-microservices-orch\src\Orchestrator.StateMachines\obj\Debug\net8.0\Orchestrator.StateMachines.csproj.CoreCompileInputs.cache
+D:\Repositories\dotnet-microservices-orch\src\Orchestrator.StateMachines\obj\Debug\net8.0\Orchestrator.StateMachines.sourcelink.json
+D:\Repositories\dotnet-microservices-orch\src\Orchestrator.StateMachines\obj\Debug\net8.0\Orchestr.0B6BAB06.Up2Date
+D:\Repositories\dotnet-microservices-orch\src\Orchestrator.StateMachines\obj\Debug\net8.0\Orchestrator.StateMachines.dll
+D:\Repositories\dotnet-microservices-orch\src\Orchestrator.StateMachines\obj\Debug\net8.0\refint\Orchestrator.StateMachines.dll
+D:\Repositories\dotnet-microservices-orch\src\Orchestrator.StateMachines\obj\Debug\net8.0\Orchestrator.StateMachines.pdb
+D:\Repositories\dotnet-microservices-orch\src\Orchestrator.StateMachines\obj\Debug\net8.0\ref\Orchestrator.StateMachines.dll

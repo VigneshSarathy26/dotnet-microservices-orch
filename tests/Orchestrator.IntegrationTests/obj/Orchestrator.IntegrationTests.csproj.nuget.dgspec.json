@@ -1,0 +1,427 @@
+{
+  "format": 1,
+  "restore": {
+    "d:\\Repositories\\dotnet-microservices-orch\\tests\\Orchestrator.IntegrationTests\\Orchestrator.IntegrationTests.csproj": {}
+  },
+  "projects": {
+    "d:\\Repositories\\dotnet-microservices-orch\\src\\Orchestrator.Contracts\\Orchestrator.Contracts.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "d:\\Repositories\\dotnet-microservices-orch\\src\\Orchestrator.Contracts\\Orchestrator.Contracts.csproj",
+        "projectName": "Orchestrator.Contracts",
+        "projectPath": "d:\\Repositories\\dotnet-microservices-orch\\src\\Orchestrator.Contracts\\Orchestrator.Contracts.csproj",
+        "packagesPath": "C:\\Users\\vigne\\.nuget\\packages\\",
+        "outputPath": "d:\\Repositories\\dotnet-microservices-orch\\src\\Orchestrator.Contracts\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "d:\\Repositories\\dotnet-microservices-orch\\NuGet.Config",
+          "C:\\Users\\vigne\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "SonarAnalyzer.CSharp": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.23.0.88079, )"
+            },
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.118, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.23, 8.0.23]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.23, 8.0.23]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.23, 8.0.23]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "d:\\Repositories\\dotnet-microservices-orch\\src\\Orchestrator.Infrastructure\\Orchestrator.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "d:\\Repositories\\dotnet-microservices-orch\\src\\Orchestrator.Infrastructure\\Orchestrator.Infrastructure.csproj",
+        "projectName": "Orchestrator.Infrastructure",
+        "projectPath": "d:\\Repositories\\dotnet-microservices-orch\\src\\Orchestrator.Infrastructure\\Orchestrator.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\vigne\\.nuget\\packages\\",
+        "outputPath": "d:\\Repositories\\dotnet-microservices-orch\\src\\Orchestrator.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "d:\\Repositories\\dotnet-microservices-orch\\NuGet.Config",
+          "C:\\Users\\vigne\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "d:\\Repositories\\dotnet-microservices-orch\\src\\Orchestrator.Contracts\\Orchestrator.Contracts.csproj": {
+                "projectPath": "d:\\Repositories\\dotnet-microservices-orch\\src\\Orchestrator.Contracts\\Orchestrator.Contracts.csproj"
+              },
+              "d:\\Repositories\\dotnet-microservices-orch\\src\\Orchestrator.StateMachines\\Orchestrator.StateMachines.csproj": {
+                "projectPath": "d:\\Repositories\\dotnet-microservices-orch\\src\\Orchestrator.StateMachines\\Orchestrator.StateMachines.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "MassTransit": {
+              "target": "Package",
+              "version": "[8.2.5, )"
+            },
+            "MassTransit.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.2.5, )"
+            },
+            "SonarAnalyzer.CSharp": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.23.0.88079, )"
+            },
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.118, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.23, 8.0.23]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.23, 8.0.23]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.23, 8.0.23]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "d:\\Repositories\\dotnet-microservices-orch\\src\\Orchestrator.StateMachines\\Orchestrator.StateMachines.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "d:\\Repositories\\dotnet-microservices-orch\\src\\Orchestrator.StateMachines\\Orchestrator.StateMachines.csproj",
+        "projectName": "Orchestrator.StateMachines",
+        "projectPath": "d:\\Repositories\\dotnet-microservices-orch\\src\\Orchestrator.StateMachines\\Orchestrator.StateMachines.csproj",
+        "packagesPath": "C:\\Users\\vigne\\.nuget\\packages\\",
+        "outputPath": "d:\\Repositories\\dotnet-microservices-orch\\src\\Orchestrator.StateMachines\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "d:\\Repositories\\dotnet-microservices-orch\\NuGet.Config",
+          "C:\\Users\\vigne\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "d:\\Repositories\\dotnet-microservices-orch\\src\\Orchestrator.Contracts\\Orchestrator.Contracts.csproj": {
+                "projectPath": "d:\\Repositories\\dotnet-microservices-orch\\src\\Orchestrator.Contracts\\Orchestrator.Contracts.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "MassTransit": {
+              "target": "Package",
+              "version": "[8.2.5, )"
+            },
+            "SonarAnalyzer.CSharp": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.23.0.88079, )"
+            },
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.118, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.23, 8.0.23]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.23, 8.0.23]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.23, 8.0.23]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "d:\\Repositories\\dotnet-microservices-orch\\tests\\Orchestrator.IntegrationTests\\Orchestrator.IntegrationTests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "d:\\Repositories\\dotnet-microservices-orch\\tests\\Orchestrator.IntegrationTests\\Orchestrator.IntegrationTests.csproj",
+        "projectName": "Orchestrator.IntegrationTests",
+        "projectPath": "d:\\Repositories\\dotnet-microservices-orch\\tests\\Orchestrator.IntegrationTests\\Orchestrator.IntegrationTests.csproj",
+        "packagesPath": "C:\\Users\\vigne\\.nuget\\packages\\",
+        "outputPath": "d:\\Repositories\\dotnet-microservices-orch\\tests\\Orchestrator.IntegrationTests\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "d:\\Repositories\\dotnet-microservices-orch\\NuGet.Config",
+          "C:\\Users\\vigne\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "d:\\Repositories\\dotnet-microservices-orch\\src\\Orchestrator.Contracts\\Orchestrator.Contracts.csproj": {
+                "projectPath": "d:\\Repositories\\dotnet-microservices-orch\\src\\Orchestrator.Contracts\\Orchestrator.Contracts.csproj"
+              },
+              "d:\\Repositories\\dotnet-microservices-orch\\src\\Orchestrator.Infrastructure\\Orchestrator.Infrastructure.csproj": {
+                "projectPath": "d:\\Repositories\\dotnet-microservices-orch\\src\\Orchestrator.Infrastructure\\Orchestrator.Infrastructure.csproj"
+              },
+              "d:\\Repositories\\dotnet-microservices-orch\\src\\Orchestrator.StateMachines\\Orchestrator.StateMachines.csproj": {
+                "projectPath": "d:\\Repositories\\dotnet-microservices-orch\\src\\Orchestrator.StateMachines\\Orchestrator.StateMachines.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "MassTransit": {
+              "target": "Package",
+              "version": "[8.2.5, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Testing": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.14.1, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "NUnit.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.2.0, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "SonarAnalyzer.CSharp": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.23.0.88079, )"
+            },
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.118, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[6.0.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.23, 8.0.23]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.23, 8.0.23]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.23, 8.0.23]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

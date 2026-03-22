@@ -1,0 +1,9 @@
+**/.git
+**/.vs
+**/.vscode
+**/bin
+**/obj
+**/out
+**/publish
+**/dist
+# Do NOT ignore .sln or Dockerfiles

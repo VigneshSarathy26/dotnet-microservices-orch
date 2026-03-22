@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="99ef6a80-24d5-4d34-aeb0-d4097f3d0af7" name="vignesh@VIGNESH 2026-03-23 00:32:00" runUser="Vignesh\vignesh" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-03-23T00:32:00.3134571+05:30" queuing="2026-03-23T00:32:00.3134577+05:30" start="2026-03-23T00:31:56.7362064+05:30" finish="2026-03-23T00:32:00.4133914+05:30" />
+  <TestSettings name="default" id="ce4476e3-7d7d-46a8-8328-a122f27a8155">
+    <Deployment runDeploymentRoot="vignesh_VIGNESH_2026-03-23_00_32_00" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="b7a0153d-f92b-4456-9c98-eb9a292be8b1" testId="78f40ea2-e076-599f-4f69-c00ce1185e81" testName="Can_save_and_retrieve_OrderState_From_Database" computerName="VIGNESH" duration="00:00:00.2590190" startTime="2026-03-23T00:32:00.0557878+05:30" endTime="2026-03-23T00:32:00.3148059+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b7a0153d-f92b-4456-9c98-eb9a292be8b1" />
+    <UnitTestResult executionId="15bde681-deed-4526-af16-488fbfc10b89" testId="a2049a11-cee5-10d2-1b31-3b3e5cfd9c2d" testName="Publish_SubmitOrder_RecordsState_InDatabase" computerName="VIGNESH" duration="00:00:02.5732149" startTime="2026-03-23T00:31:57.4761885+05:30" endTime="2026-03-23T00:32:00.0490832+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="15bde681-deed-4526-af16-488fbfc10b89">
+      <Output>
+        <StdOut>00:31:57.732-I Configured endpoint OrderState, Saga: Orchestrator.StateMachines.Order.OrderState, State Machine: Orchestrator.StateMachines.Order.OrderStateMachine&#xD;
+00:31:57.924-D Starting bus instances: IBus&#xD;
+00:31:57.928-D Starting bus: loopback://localhost/&#xD;
+00:31:57.970-D Endpoint Ready: loopback://localhost/OrderState&#xD;
+00:31:57.970-D Endpoint Ready: loopback://localhost/VIGNESH_testhost_bus_atqyyyndb1mmsqmhbdxeotm7g3&#xD;
+00:31:57.974-I Bus started: loopback://localhost/&#xD;
+00:31:57.997-D Create send transport: loopback://localhost/urn:message:Orchestrator.Contracts.Order:SubmitOrder&#xD;
+00:31:58.108-D SEND loopback://localhost/urn:message:Orchestrator.Contracts.Order:SubmitOrder c45c0000-430c-96bb-ebb2-08de88457ded Orchestrator.Contracts.Order.SubmitOrder&#xD;
+00:31:58.270-D An 'IServiceProvider' was created for internal use by Entity Framework.&#xD;
+00:31:58.564-D Entity Framework Core 8.0.2 initialized 'OrderStateDbContext' using provider 'Microsoft.EntityFrameworkCore.InMemory:8.0.2' with options: StoreName=SagaE2E_87ef7113-96ec-43d0-a421-c57ca7af0639 &#xD;
+00:31:58.635-D Compiling query expression: &#xD;
+'DbSet&lt;OrderState&gt;().FromSql(SELECT * FROM OrderState WITH (UPDLOCK, ROWLOCK) WHERE CorrelationId = @p0, __p_0)&#xD;
+    .AsTracking()&#xD;
+    .SingleOrDefault()'&#xD;
+00:31:58.685-D 'OrderStateDbContext' disposed.&#xD;
+00:31:58.721-D Create send transport: loopback://localhost/urn:message:MassTransit:Fault[[Orchestrator.Contracts.Order:SubmitOrder]]&#xD;
+00:31:58.745-D SEND loopback://localhost/urn:message:MassTransit:Fault[[Orchestrator.Contracts.Order:SubmitOrder]] c45c0000-430c-96bb-7eb7-08de88457e5b MassTransit.Fault&lt;Orchestrator.Contracts.Order.SubmitOrder&gt;&#xD;
+00:31:58.748-E R-FAULT loopback://localhost/OrderState c45c0000-430c-96bb-ebb2-08de88457ded Orchestrator.Contracts.Order.SubmitOrder Orchestrator.StateMachines.Order.OrderState(00:00:00.5350103)&#xD;
+&#xD;
+System.InvalidOperationException: Query root of type 'FromSqlQueryRootExpression' wasn't handled by provider code. This issue happens when using a provider specific method on a different provider where it is not supported.&#xD;
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.Translate(Expression expression)&#xD;
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)&#xD;
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)&#xD;
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)&#xD;
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.&lt;&gt;c__DisplayClass12_0`1.&lt;ExecuteAsync&gt;b__0()&#xD;
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)&#xD;
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, Expression expression, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.SingleOrDefaultAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)&#xD;
+   at MassTransit.EntityFrameworkCoreIntegration.Saga.PessimisticLoadQueryExecutor`1.Load(DbContext dbContext, Guid correlationId, CancellationToken cancellationToken) in /_/src/Persistence/MassTransit.EntityFrameworkCoreIntegration/EntityFrameworkCoreIntegration/Saga/PessimisticLoadQueryExecutor.cs:line 34&#xD;
+   at MassTransit.EntityFrameworkCoreIntegration.Saga.PessimisticSagaRepositoryLockStrategy`1.Load(DbContext context, Guid correlationId, CancellationToken cancellationToken) in /_/src/Persistence/MassTransit.EntityFrameworkCoreIntegration/EntityFrameworkCoreIntegration/Saga/PessimisticSagaRepositoryLockStrategy.cs:line 29&#xD;
+   at MassTransit.EntityFrameworkCoreIntegration.Saga.DbContextSagaRepositoryContext`2.Load(Guid correlationId) in /_/src/Persistence/MassTransit.EntityFrameworkCoreIntegration/EntityFrameworkCoreIntegration/Saga/DbContextSagaRepositoryContext.cs:line 75&#xD;
+   at MassTransit.Middleware.SendSagaPipe`2.Send(SagaRepositoryContext`2 context) in /_/src/MassTransit/Middleware/SendSagaPipe.cs:line 36&#xD;
+   at MassTransit.EntityFrameworkCoreIntegration.Saga.EntityFrameworkSagaRepositoryContextFactory`1.&lt;&gt;c__DisplayClass7_0`1.&lt;&lt;Send&gt;g__SendAsyncCallback|0&gt;d.MoveNext() in /_/src/Persistence/MassTransit.EntityFrameworkCoreIntegration/EntityFrameworkCoreIntegration/Saga/EntityFrameworkSagaRepositoryContextFactory.cs:line 67&#xD;
+--- End of stack trace from previous location ---&#xD;
+   at MassTransit.EntityFrameworkCoreIntegration.Saga.EntityFrameworkSagaRepositoryContextFactory`1.&lt;&gt;c__DisplayClass10_0.&lt;&lt;WithinTransaction&gt;g__Create|0&gt;d.MoveNext() in /_/src/Persistence/MassTransit.EntityFrameworkCoreIntegration/EntityFrameworkCoreIntegration/Saga/EntityFrameworkSagaRepositoryContextFactory.cs:line 166&#xD;
+--- End of stack trace from previous location ---&#xD;
+   at MassTransit.EntityFrameworkCoreIntegration.Saga.EntityFrameworkSagaRepositoryContextFactory`1.WithinTransaction[T](DbContext context, CancellationToken cancellationToken, Func`1 callback) in /_/src/Persistence/MassTransit.EntityFrameworkCoreIntegration/EntityFrameworkCoreIntegration/Saga/EntityFrameworkSagaRepositoryContextFactory.cs:line 191&#xD;
+   at MassTransit.EntityFrameworkCoreIntegration.Saga.EntityFrameworkSagaRepositoryContextFactory`1.WithinTransaction[T](DbContext context, CancellationToken cancellationToken, Func`1 callback) in /_/src/Persistence/MassTransit.EntityFrameworkCoreIntegration/EntityFrameworkCoreIntegration/Saga/EntityFrameworkSagaRepositoryContextFactory.cs:line 210&#xD;
+   at MassTransit.EntityFrameworkCoreIntegration.Saga.EntityFrameworkSagaRepositoryContextFactory`1.WithinTransaction[T](DbContext context, CancellationToken cancellationToken, Func`1 callback) in /_/src/Persistence/MassTransit.EntityFrameworkCoreIntegration/EntityFrameworkCoreIntegration/Saga/EntityFrameworkSagaRepositoryContextFactory.cs:line 210&#xD;
+   at MassTransit.EntityFrameworkCoreIntegration.Saga.EntityFrameworkSagaRepositoryContextFactory`1.Send[T](ConsumeContext`1 context, IPipe`1 next) in /_/src/Persistence/MassTransit.EntityFrameworkCoreIntegration/EntityFrameworkCoreIntegration/Saga/EntityFrameworkSagaRepositoryContextFactory.cs:line 81&#xD;
+   at MassTransit.EntityFrameworkCoreIntegration.Saga.EntityFrameworkSagaRepositoryContextFactory`1.Send[T](ConsumeContext`1 context, IPipe`1 next) in /_/src/Persistence/MassTransit.EntityFrameworkCoreIntegration/EntityFrameworkCoreIntegration/Saga/EntityFrameworkSagaRepositoryContextFactory.cs:line 86&#xD;
+   at MassTransit.DependencyInjection.DependencyInjectionSagaRepositoryContextFactory`1.Send[T](ConsumeContext`1 context, Func`3 send) in /_/src/MassTransit/DependencyInjection/DependencyInjection/DependencyInjectionSagaRepositoryContextFactory.cs:line 87&#xD;
+   at MassTransit.DependencyInjection.DependencyInjectionSagaRepositoryContextFactory`1.Send[T](ConsumeContext`1 context, Func`3 send) in /_/src/MassTransit/DependencyInjection/DependencyInjection/DependencyInjectionSagaRepositoryContextFactory.cs:line 96&#xD;
+   at MassTransit.Middleware.CorrelatedSagaFilter`2.Send(ConsumeContext`1 context, IPipe`1 next) in /_/src/MassTransit/Middleware/CorrelatedSagaFilter.cs:line 45&#xD;
+00:32:00.014-D Stopping bus instances: IBus&#xD;
+00:32:00.019-D Stopping bus: loopback://localhost/&#xD;
+00:32:00.023-D Endpoint Stopping: loopback://localhost/OrderState&#xD;
+00:32:00.024-D Consumer Stopping: loopback://localhost/OrderState (Stop Receive Transport)&#xD;
+00:32:00.028-D Endpoint Completed: loopback://localhost/OrderState&#xD;
+00:32:00.034-D Consumer Completed: loopback://localhost/OrderState: 1 received, 1 concurrent&#xD;
+00:32:00.037-D Endpoint Stopping: loopback://localhost/VIGNESH_testhost_bus_atqyyyndb1mmsqmhbdxeotm7g3&#xD;
+00:32:00.037-D Consumer Stopping: loopback://localhost/VIGNESH_testhost_bus_atqyyyndb1mmsqmhbdxeotm7g3 (Stop Receive Transport)&#xD;
+00:32:00.037-D Endpoint Completed: loopback://localhost/VIGNESH_testhost_bus_atqyyyndb1mmsqmhbdxeotm7g3&#xD;
+00:32:00.037-D Consumer Completed: loopback://localhost/VIGNESH_testhost_bus_atqyyyndb1mmsqmhbdxeotm7g3: 0 received, 0 concurrent&#xD;
+00:32:00.045-I Bus stopped: loopback://localhost/</StdOut>
+        <ErrorInfo>
+          <Message>  Assert.That(await sagaHarness.Consumed.Any&lt;SubmitOrder&gt;(), Is.True)&#xD;
+  Expected: True&#xD;
+  But was:  False&#xD;
+</Message>
+          <StackTrace>   at Orchestrator.IntegrationTests.EndToEndSagaIntegrationTests.Publish_SubmitOrder_RecordsState_InDatabase() in d:\Repositories\dotnet-microservices-orch\tests\Orchestrator.IntegrationTests\EndToEndSagaIntegrationTests.cs:line 74&#xD;
+   at NUnit.Framework.Internal.TaskAwaitAdapter.GenericAdapter`1.BlockUntilCompleted()&#xD;
+   at NUnit.Framework.Internal.MessagePumpStrategy.NoMessagePumpStrategy.WaitForCompletion(AwaitAdapter awaiter)&#xD;
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await[TResult](Func`1 invoke)&#xD;
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await(Func`1 invoke)&#xD;
+   at NUnit.Framework.Internal.Commands.TestMethodCommand.RunTestMethod(TestExecutionContext context)&#xD;
+   at NUnit.Framework.Internal.Commands.TestMethodCommand.Execute(TestExecutionContext context)&#xD;
+   at NUnit.Framework.Internal.Commands.BeforeAndAfterTestCommand.&lt;&gt;c__DisplayClass1_0.&lt;Execute&gt;b__0()&#xD;
+   at NUnit.Framework.Internal.Commands.DelegatingTestCommand.RunTestMethodInThreadAbortSafeZone(TestExecutionContext context, Action action)&#xD;
+
+1)    at Orchestrator.IntegrationTests.EndToEndSagaIntegrationTests.Publish_SubmitOrder_RecordsState_InDatabase() in d:\Repositories\dotnet-microservices-orch\tests\Orchestrator.IntegrationTests\EndToEndSagaIntegrationTests.cs:line 74&#xD;
+
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="Can_save_and_retrieve_OrderState_From_Database" storage="d:\repositories\dotnet-microservices-orch\tests\orchestrator.integrationtests\bin\debug\net8.0\orchestrator.integrationtests.dll" id="78f40ea2-e076-599f-4f69-c00ce1185e81">
+      <Execution id="b7a0153d-f92b-4456-9c98-eb9a292be8b1" />
+      <TestMethod codeBase="d:\Repositories\dotnet-microservices-orch\tests\Orchestrator.IntegrationTests\bin\Debug\net8.0\Orchestrator.IntegrationTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="Orchestrator.IntegrationTests.OrderStateDbContextTests" name="Can_save_and_retrieve_OrderState_From_Database" />
+    </UnitTest>
+    <UnitTest name="Publish_SubmitOrder_RecordsState_InDatabase" storage="d:\repositories\dotnet-microservices-orch\tests\orchestrator.integrationtests\bin\debug\net8.0\orchestrator.integrationtests.dll" id="a2049a11-cee5-10d2-1b31-3b3e5cfd9c2d">
+      <Execution id="15bde681-deed-4526-af16-488fbfc10b89" />
+      <TestMethod codeBase="d:\Repositories\dotnet-microservices-orch\tests\Orchestrator.IntegrationTests\bin\Debug\net8.0\Orchestrator.IntegrationTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="Orchestrator.IntegrationTests.EndToEndSagaIntegrationTests" name="Publish_SubmitOrder_RecordsState_InDatabase" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="78f40ea2-e076-599f-4f69-c00ce1185e81" executionId="b7a0153d-f92b-4456-9c98-eb9a292be8b1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a2049a11-cee5-10d2-1b31-3b3e5cfd9c2d" executionId="15bde681-deed-4526-af16-488fbfc10b89" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Failed">
+    <Counters total="2" executed="2" passed="1" failed="1" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>NUnit Adapter 4.5.0.0: Test execution started&#xD;
+Running all tests in d:\Repositories\dotnet-microservices-orch\tests\Orchestrator.IntegrationTests\bin\Debug\net8.0\Orchestrator.IntegrationTests.dll&#xD;
+   NUnit3TestExecutor discovered 2 of 2 NUnit test cases using Current Discovery mode, Non-Explicit run&#xD;
+NUnit Adapter 4.5.0.0: Test execution complete&#xD;
+</StdOut>
+    </Output>
+    <RunInfos>
+      <RunInfo computerName="VIGNESH" outcome="Warning" timestamp="2026-03-23T00:32:00.0748058+05:30">
+        <Text>00:31:57.732-I Configured endpoint OrderState, Saga: Orchestrator.StateMachines.Order.OrderState, State Machine: Orchestrator.StateMachines.Order.OrderStateMachine&#xD;
+00:31:57.924-D Starting bus instances: IBus&#xD;
+00:31:57.928-D Starting bus: loopback://localhost/&#xD;
+00:31:57.970-D Endpoint Ready: loopback://localhost/OrderState&#xD;
+00:31:57.970-D Endpoint Ready: loopback://localhost/VIGNESH_testhost_bus_atqyyyndb1mmsqmhbdxeotm7g3&#xD;
+00:31:57.974-I Bus started: loopback://localhost/&#xD;
+00:31:57.997-D Create send transport: loopback://localhost/urn:message:Orchestrator.Contracts.Order:SubmitOrder&#xD;
+00:31:58.108-D SEND loopback://localhost/urn:message:Orchestrator.Contracts.Order:SubmitOrder c45c0000-430c-96bb-ebb2-08de88457ded Orchestrator.Contracts.Order.SubmitOrder&#xD;
+00:31:58.270-D An 'IServiceProvider' was created for internal use by Entity Framework.&#xD;
+00:31:58.564-D Entity Framework Core 8.0.2 initialized 'OrderStateDbContext' using provider 'Microsoft.EntityFrameworkCore.InMemory:8.0.2' with options: StoreName=SagaE2E_87ef7113-96ec-43d0-a421-c57ca7af0639 &#xD;
+00:31:58.635-D Compiling query expression: &#xD;
+'DbSet&lt;OrderState&gt;().FromSql(SELECT * FROM OrderState WITH (UPDLOCK, ROWLOCK) WHERE CorrelationId = @p0, __p_0)&#xD;
+    .AsTracking()&#xD;
+    .SingleOrDefault()'&#xD;
+00:31:58.685-D 'OrderStateDbContext' disposed.&#xD;
+00:31:58.721-D Create send transport: loopback://localhost/urn:message:MassTransit:Fault[[Orchestrator.Contracts.Order:SubmitOrder]]&#xD;
+00:31:58.745-D SEND loopback://localhost/urn:message:MassTransit:Fault[[Orchestrator.Contracts.Order:SubmitOrder]] c45c0000-430c-96bb-7eb7-08de88457e5b MassTransit.Fault&lt;Orchestrator.Contracts.Order.SubmitOrder&gt;&#xD;
+00:31:58.748-E R-FAULT loopback://localhost/OrderState c45c0000-430c-96bb-ebb2-08de88457ded Orchestrator.Contracts.Order.SubmitOrder Orchestrator.StateMachines.Order.OrderState(00:00:00.5350103)&#xD;
+&#xD;
+System.InvalidOperationException: Query root of type 'FromSqlQueryRootExpression' wasn't handled by provider code. This issue happens when using a provider specific method on a different provider where it is not supported.&#xD;
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.Translate(Expression expression)&#xD;
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)&#xD;
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)&#xD;
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)&#xD;
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.&lt;&gt;c__DisplayClass12_0`1.&lt;ExecuteAsync&gt;b__0()&#xD;
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)&#xD;
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, Expression expression, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.SingleOrDefaultAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)&#xD;
+   at MassTransit.EntityFrameworkCoreIntegration.Saga.PessimisticLoadQueryExecutor`1.Load(DbContext dbContext, Guid correlationId, CancellationToken cancellationToken) in /_/src/Persistence/MassTransit.EntityFrameworkCoreIntegration/EntityFrameworkCoreIntegration/Saga/PessimisticLoadQueryExecutor.cs:line 34&#xD;
+   at MassTransit.EntityFrameworkCoreIntegration.Saga.PessimisticSagaRepositoryLockStrategy`1.Load(DbContext context, Guid correlationId, CancellationToken cancellationToken) in /_/src/Persistence/MassTransit.EntityFrameworkCoreIntegration/EntityFrameworkCoreIntegration/Saga/PessimisticSagaRepositoryLockStrategy.cs:line 29&#xD;
+   at MassTransit.EntityFrameworkCoreIntegration.Saga.DbContextSagaRepositoryContext`2.Load(Guid correlationId) in /_/src/Persistence/MassTransit.EntityFrameworkCoreIntegration/EntityFrameworkCoreIntegration/Saga/DbContextSagaRepositoryContext.cs:line 75&#xD;
+   at MassTransit.Middleware.SendSagaPipe`2.Send(SagaRepositoryContext`2 context) in /_/src/MassTransit/Middleware/SendSagaPipe.cs:line 36&#xD;
+   at MassTransit.EntityFrameworkCoreIntegration.Saga.EntityFrameworkSagaRepositoryContextFactory`1.&lt;&gt;c__DisplayClass7_0`1.&lt;&lt;Send&gt;g__SendAsyncCallback|0&gt;d.MoveNext() in /_/src/Persistence/MassTransit.EntityFrameworkCoreIntegration/EntityFrameworkCoreIntegration/Saga/EntityFrameworkSagaRepositoryContextFactory.cs:line 67&#xD;
+--- End of stack trace from previous location ---&#xD;
+   at MassTransit.EntityFrameworkCoreIntegration.Saga.EntityFrameworkSagaRepositoryContextFactory`1.&lt;&gt;c__DisplayClass10_0.&lt;&lt;WithinTransaction&gt;g__Create|0&gt;d.MoveNext() in /_/src/Persistence/MassTransit.EntityFrameworkCoreIntegration/EntityFrameworkCoreIntegration/Saga/EntityFrameworkSagaRepositoryContextFactory.cs:line 166&#xD;
+--- End of stack trace from previous location ---&#xD;
+   at MassTransit.EntityFrameworkCoreIntegration.Saga.EntityFrameworkSagaRepositoryContextFactory`1.WithinTransaction[T](DbContext context, CancellationToken cancellationToken, Func`1 callback) in /_/src/Persistence/MassTransit.EntityFrameworkCoreIntegration/EntityFrameworkCoreIntegration/Saga/EntityFrameworkSagaRepositoryContextFactory.cs:line 191&#xD;
+   at MassTransit.EntityFrameworkCoreIntegration.Saga.EntityFrameworkSagaRepositoryContextFactory`1.WithinTransaction[T](DbContext context, CancellationToken cancellationToken, Func`1 callback) in /_/src/Persistence/MassTransit.EntityFrameworkCoreIntegration/EntityFrameworkCoreIntegration/Saga/EntityFrameworkSagaRepositoryContextFactory.cs:line 210&#xD;
+   at MassTransit.EntityFrameworkCoreIntegration.Saga.EntityFrameworkSagaRepositoryContextFactory`1.WithinTransaction[T](DbContext context, CancellationToken cancellationToken, Func`1 callback) in /_/src/Persistence/MassTransit.EntityFrameworkCoreIntegration/EntityFrameworkCoreIntegration/Saga/EntityFrameworkSagaRepositoryContextFactory.cs:line 210&#xD;
+   at MassTransit.EntityFrameworkCoreIntegration.Saga.EntityFrameworkSagaRepositoryContextFactory`1.Send[T](ConsumeContext`1 context, IPipe`1 next) in /_/src/Persistence/MassTransit.EntityFrameworkCoreIntegration/EntityFrameworkCoreIntegration/Saga/EntityFrameworkSagaRepositoryContextFactory.cs:line 81&#xD;
+   at MassTransit.EntityFrameworkCoreIntegration.Saga.EntityFrameworkSagaRepositoryContextFactory`1.Send[T](ConsumeContext`1 context, IPipe`1 next) in /_/src/Persistence/MassTransit.EntityFrameworkCoreIntegration/EntityFrameworkCoreIntegration/Saga/EntityFrameworkSagaRepositoryContextFactory.cs:line 86&#xD;
+   at MassTransit.DependencyInjection.DependencyInjectionSagaRepositoryContextFactory`1.Send[T](ConsumeContext`1 context, Func`3 send) in /_/src/MassTransit/DependencyInjection/DependencyInjection/DependencyInjectionSagaRepositoryContextFactory.cs:line 87&#xD;
+   at MassTransit.DependencyInjection.DependencyInjectionSagaRepositoryContextFactory`1.Send[T](ConsumeContext`1 context, Func`3 send) in /_/src/MassTransit/DependencyInjection/DependencyInjection/DependencyInjectionSagaRepositoryContextFactory.cs:line 96&#xD;
+   at MassTransit.Middleware.CorrelatedSagaFilter`2.Send(ConsumeContext`1 context, IPipe`1 next) in /_/src/MassTransit/Middleware/CorrelatedSagaFilter.cs:line 45&#xD;
+00:32:00.014-D Stopping bus instances: IBus&#xD;
+00:32:00.019-D Stopping bus: loopback://localhost/&#xD;
+00:32:00.023-D Endpoint Stopping: loopback://localhost/OrderState&#xD;
+00:32:00.024-D Consumer Stopping: loopback://localhost/OrderState (Stop Receive Transport)&#xD;
+00:32:00.028-D Endpoint Completed: loopback://localhost/OrderState&#xD;
+00:32:00.034-D Consumer Completed: loopback://localhost/OrderState: 1 received, 1 concurrent&#xD;
+00:32:00.037-D Endpoint Stopping: loopback://localhost/VIGNESH_testhost_bus_atqyyyndb1mmsqmhbdxeotm7g3&#xD;
+00:32:00.037-D Consumer Stopping: loopback://localhost/VIGNESH_testhost_bus_atqyyyndb1mmsqmhbdxeotm7g3 (Stop Receive Transport)&#xD;
+00:32:00.037-D Endpoint Completed: loopback://localhost/VIGNESH_testhost_bus_atqyyyndb1mmsqmhbdxeotm7g3&#xD;
+00:32:00.037-D Consumer Completed: loopback://localhost/VIGNESH_testhost_bus_atqyyyndb1mmsqmhbdxeotm7g3: 0 received, 0 concurrent&#xD;
+00:32:00.045-I Bus stopped: loopback://localhost/&#xD;
+</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+</TestRun>

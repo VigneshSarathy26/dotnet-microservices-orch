@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "R7Y/rjCOloQ=",
+  "success": true,
+  "projectFilePath": "d:\\Repositories\\dotnet-microservices-orch\\src\\Orchestrator.Contracts\\Orchestrator.Contracts.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\vigne\\.nuget\\packages\\sonaranalyzer.csharp\\9.23.0.88079\\sonaranalyzer.csharp.9.23.0.88079.nupkg.sha512",
+    "C:\\Users\\vigne\\.nuget\\packages\\stylecop.analyzers\\1.1.118\\stylecop.analyzers.1.1.118.nupkg.sha512",
+    "C:\\Users\\vigne\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.23\\microsoft.netcore.app.ref.8.0.23.nupkg.sha512",
+    "C:\\Users\\vigne\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.23\\microsoft.windowsdesktop.app.ref.8.0.23.nupkg.sha512",
+    "C:\\Users\\vigne\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.23\\microsoft.aspnetcore.app.ref.8.0.23.nupkg.sha512"
+  ],
+  "logs": []
+}

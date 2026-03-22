@@ -1,0 +1,31 @@
+root = true
+
+[*.{cs,vb}]
+# Default settings
+end_of_line = crlf
+insert_final_newline = true
+
+# Indentation
+indent_style = space
+indent_size = 4
+tab_width = 4
+
+# StyleCop specific config
+dotnet_analyzer_diagnostic.severity = warning
+
+# Disable XML Documentation warnings to keep boilerplate clean
+dotnet_diagnostic.SA1600.severity = none
+dotnet_diagnostic.SA1633.severity = none
+dotnet_diagnostic.SA1602.severity = none
+dotnet_diagnostic.SA1601.severity = none
+
+# Disable strict ordering rules for brevity
+dotnet_diagnostic.SA1200.severity = none
+dotnet_diagnostic.SA1201.severity = none
+dotnet_diagnostic.SA1202.severity = none
+
+# Disable 'this.' prefix requirement
+dotnet_diagnostic.SA1101.severity = none
+
+# Newline at end of file
+dotnet_diagnostic.SA1636.severity = none
